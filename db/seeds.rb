@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'random_data'
+
+ 10.times do
+   Drill.create!(
+     title:  RandomData.random_sentence,
+     description:   RandomData.random_paragraph
+   )
+ end
+ drills = Drill.all
+
+ puts "Seed finished"
+ puts "#{Drill.count} drills created"

@@ -1,0 +1,5 @@
+<h1>Drills</h1>
+<%= link_to "Create new Drill", new_drill_path, class: 'btn btn-success' %>
+  <% @drills.each do |drill| %>
+  <p><%= link_to drill.title, drill_path(drill.id) %></p>
+  <% end %>

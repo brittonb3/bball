@@ -1,0 +1,12 @@
+<h1>Drills#edit</h1>
+<p>Find me in app/views/drills/edit.html.erb</p>
+<h3>Create new Drill</h3>
+<%= form_for @drill do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+
+   <%= f.label :description %>
+   <%= f.text_area :description %>
+
+   <%= f.submit "Save" %>
+ <% end %>
