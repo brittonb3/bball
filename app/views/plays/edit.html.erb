@@ -1,6 +1,9 @@
 <h1>Plays#edit</h1>
 <p>Find me in app/views/plays/edit.html.erb</p>
-<%= form_for @play do |f| %>
+<%= form_for @play, html: { multipart: true } do |f| %>
+  <%= f.label :document%>
+  <%= f.file_field :document %>
+
   <%= f.label :title %>
   <%= f.text_field :title %>
 

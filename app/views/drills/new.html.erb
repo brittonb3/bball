@@ -1,6 +1,6 @@
 
 <h3>Create new Drill</h3>
-<%= form_for @drill do |f| %>
+<%= form_for @drill, html: { multipart: true }  do |f| %>
    <%= f.label :file %>
    <%= f.file_field :file %>
 

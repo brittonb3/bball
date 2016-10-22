@@ -1,5 +1,8 @@
 <h3>Create new Play</h3>
-<%= form_for @play do |f| %>
+<%= form_for @play, html: { multipart: true } do |f| %>
+<%= f.label :document%>
+<%= f.file_field :document %>
+
 <%= f.label :title %>
 <%= f.text_field :title %>
 
