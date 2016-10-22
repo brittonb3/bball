@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :drills
+  resources :drills, :plays
 
   get 'about' => 'welcome#about'
 

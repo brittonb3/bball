@@ -1,6 +1,9 @@
 
 <h3>Create new Drill</h3>
 <%= form_for @drill do |f| %>
+   <%= f.label :file %>
+   <%= f.file_field :file %>
+
    <%= f.label :title %>
    <%= f.text_field :title %>
 

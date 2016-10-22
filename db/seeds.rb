@@ -15,5 +15,15 @@ require 'random_data'
  end
  drills = Drill.all
 
+ 10.times do
+   Play.create!(
+    title: RandomData.random_sentence,
+    description: RandomData.random_paragraph
+   )
+ end
+ plays = Play.all
+
+
  puts "Seed finished"
  puts "#{Drill.count} drills created"
+ puts "#{Play.count} plays created"

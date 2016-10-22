@@ -12,9 +12,7 @@ class DrillsController < ApplicationController
   end
 
   def create
-    @drill = Drill.new
-    @drill.title = params[:drill][:title]
-    @drill.description = params[:drill][:description]
+    @drill = Drill.new(drill_params)
 
     if @drill.save
       flash[:notice] = "You successfully created a new drill."
@@ -31,8 +29,7 @@ class DrillsController < ApplicationController
 
   def update
      @drill = Drill.find(params[:id])
-     @drill.title = params[:drill][:title]
-     @drill.description = params[:drill][:description]
+     @drill.assign_attributes(drill_params)
 
      if @drill.save
        flash[:notice] = "Drill was updated successfully."
@@ -53,6 +50,12 @@ class DrillsController < ApplicationController
        flash.now[:alert] = "There was a problem deleting the drill."
        render :show
      end
+   end
+
+   private
+
+   def drill_params
+     params.require(:drill).permit(:title, :description, :file)
    end
 
 end

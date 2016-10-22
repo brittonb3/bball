@@ -1,0 +1,7 @@
+<h1>Plays#show</h1>
+<p>Find me in app/views/plays/show.html.erb</p>
+<%= link_to "Edit", edit_play_path %>
+<%= link_to "Delete", @play, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this drill?'} %>
+
+<h3><%= @play.title %></h3>
+<p><%= @play.description %></p>

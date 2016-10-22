@@ -3,3 +3,4 @@
 <%= link_to "Delete Drill", @drill, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this drill?'} %>
 <h1><%= @drill.title %></h1>
  <p><%= @drill.description %></p>
+ <%= link_to "File", @drill.file.url %>
