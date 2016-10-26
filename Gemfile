@@ -52,3 +52,6 @@ group :production do
  end
 
 gem "paperclip", "~> 5.0.0"
+
+# Used for encrypting User passwords
+gem 'bcrypt'

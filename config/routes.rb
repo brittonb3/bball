@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :drills, :plays
 
+  resources :users, only: [:new, :create]
+
   get 'about' => 'welcome#about'
 
   get 'contact' => 'welcome#contact'
