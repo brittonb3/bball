@@ -51,7 +51,7 @@ group :production do
    gem 'rails_12factor'
  end
 
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.1.0"
 
 # Used for encrypting User passwords
 gem 'bcrypt'
